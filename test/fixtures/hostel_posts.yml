@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hostel_name: MyString
+  image: MyString
+  rating: 1
+  event_review: MyString
+  social_review: MyString
+  additional_comment: MyString
+  user_id: 1
+  currently_staying: false
+  country: MyString
+
+two:
+  hostel_name: MyString
+  image: MyString
+  rating: 1
+  event_review: MyString
+  social_review: MyString
+  additional_comment: MyString
+  user_id: 1
+  currently_staying: false
+  country: MyString
