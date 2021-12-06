@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_28_222430) do
+ActiveRecord::Schema.define(version: 2021_12_02_201702) do
 
   create_table "friends", force: :cascade do |t|
-    t.integer "hostel_post_id"
     t.integer "user_id"
+    t.integer "friend_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "hostel_posts", force: :cascade do |t|
+  create_table "hostels", force: :cascade do |t|
     t.string "hostel_name"
     t.string "image"
     t.integer "rating"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2021_11_28_222430) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "friend_id"
   end
 
 end
