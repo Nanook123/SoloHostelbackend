@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_12_02_201702) do
 
   create_table "hostels", force: :cascade do |t|
     t.string "hostel_name"
+    t.string "username"
     t.string "image"
     t.integer "rating"
     t.string "event_review"

@@ -22,7 +22,7 @@ class HostelsController < ApplicationController
     private
 
     def post_params
-        params.require(:hostel).permit(:user_id, :hostel_name, :image ,:rating, :event_review, :social_review, :additional_comment, :currently_staying, :country)
+        params.require(:hostel).permit(:user_id, :hostel_name, :image ,:rating, :event_review, :social_review, :additional_comment, :currently_staying, :country, :username)
     end
 
 end

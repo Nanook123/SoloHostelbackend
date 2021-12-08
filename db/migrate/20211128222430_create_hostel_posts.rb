@@ -2,6 +2,7 @@ class CreateHostelPosts < ActiveRecord::Migration[6.1]
   def change
     create_table :hostels do |t|
       t.string :hostel_name
+      t.string :username
       t.string :image
       t.integer :rating
       t.string :event_review

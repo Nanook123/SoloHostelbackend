@@ -1,30 +1,30 @@
 class UsersController < ApplicationController
-    skip_before_action :authorize, only: [:create, :index]
+    skip_before_action :authorize, only: [:create]
     
 
-def create
-    user = User.create!(user_params)
-    session[:user_id] = user.id
-    render json: user
-end
+    def create
+        user = User.create!(user_params)
+        session[:user_id] = user.id
+        render json: user
+    end
 
 
-def show
-    render json: @current_user
-end
+    def show
+        render json: @current_user
+    end
 
-def index 
-    render json: User.all
-end
+    def index 
+        render json: User.where.not(id: @current_user.id)
+    end
 
 
 
-private
+    private
 
-def user_params
+    def user_params
 
-    params.permit(:username, :password, :password_confirmation)
+        params.permit(:username, :password, :password_confirmation)
 
-end
+    end
 
 end
